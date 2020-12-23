@@ -1,13 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;500;700;800&display=swap");
+@import url("bootstrap/dist/css/bootstrap.min.css");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("linus-sandvide-5DIFvVwe6wk-unsplash.jpg") no-repeat center
+    center fixed;
+  position: relative;
+  background-size: cover;
+  height: 100vh;
+  font-family: "Dosis", sans-serif;
+}
+
+.blur {
+  background: url("linus-sandvide-5DIFvVwe6wk-unsplash.jpg") no-repeat center
+    center fixed;
+  z-index: 0;
+  background-size: cover;
+  height: 100vh;
+  font-family: "Dosis", sans-serif;
+  filter: blur(6px);
+}
+
+.scroll {
+  opacity: 0;
+  animation: scroll;
+  animation-duration: 0.8s;
+}
+
+.logo {
+  opacity: 1;
+  position: fixed;
+  z-index: 777000;
+}
+
+.logo img {
+  height: 130px;
+  margin-top: 20px;
+  position: fixed;
+  left: calc(50% - 120px);
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+nav {
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  opacity: 0.4;
+  position: fixed;
+  z-index: 50000;
+}
+
+ul {
+  list-style: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 60px auto;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  display: relative;
+}
+
+.containern {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-top: 0px;
+  padding: 0 24px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Dosis", sans-serif;
+}
+
+button {
+  padding: 20px 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 30px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.section {
+  width: 50%;
+  margin: 20px auto;
+  background-color: black;
+  opacity: 0.8;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+h4 {
+  text-align: center;
+  font-size: 40px;
+  margin: 0px auto 30px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Dosis", sans-serif;
+}
+
+.col-section-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.col-section-2 .section {
+  width: 22%;
+  margin: 50px;
+}
+
+.words {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  left: 3%;
+  bottom: 0;
+}
+
+.words p {
+  opacity: 0;
+  font-size: 40px;
+  animation: words;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
+.words p:nth-child(1) {
+  animation-delay: 50s;
+  position: absolute;
+  left: 37%;
+  bottom: 168%;
+}
+
+.words p:nth-child(2) {
+  animation-delay: 8s;
+  position: absolute;
+  left: 64%;
+  bottom: 47%;
+}
+
+.words p:nth-child(3) {
+  animation-delay: 16s;
+  position: absolute;
+  left: 26%;
+  bottom: 129%;
+}
+
+.words p:nth-child(4) {
+  animation-delay: 24s;
+  position: absolute;
+  left: 40%;
+  bottom: 90%;
+}
+
+.words p:nth-child(5) {
+  animation-delay: 40s;
+  margin-left: 260px;
+  margin-bottom: 100px;
+}
+
+.words p:nth-child(6) {
+  animation-delay: 44s;
+  position: absolute;
+}
+
+.reverse {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  right: 3%;
+  bottom: 0;
+}
+
+.reverse p {
+  width: 200px;
+  font-size: 40px;
+  opacity: 0;
+  height: 200px;
+  animation: words;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
+.reverse p:nth-child(1) {
+  position: absolute;
+  bottom: 70%;
+  right: 60%;
+}
+
+.reverse p:nth-child(2) {
+  animation-delay: 4s;
+  position: absolute;
+  bottom: 50%;
+  right: 80%;
+}
+.reverse p:nth-child(3) {
+  animation-delay: 12s;
+  position: absolute;
+  right: 60%;
+  bottom: 20%;
+}
+.reverse p:nth-child(4) {
+  animation-delay: 20s;
+  position: absolute;
+  bottom: 5%;
+  right: 90%;
+}
+.reverse p:nth-child(5) {
+  animation-delay: 30s;
+  position: absolute;
+  bottom: 30%;
+  right: 50%;
+}
+.reverse p:nth-child(6) {
+  animation-delay: 34s;
+  margin-right: 400px;
+}
+
+@keyframes words {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.9;
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.accordion {
+  width: 50%;
+  background-color: black;
+  opacity: 0.7;
+  color: white;
+  cursor: pointer;
+}
+
+.accordion > .card {
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  font-size: 20px;
+}
+
+.accordion > .card > .card-header {
+  font-size: 32px;
+}
+
+.accordion p {
+  font-weight: bold;
+}
+
+.accordion div {
+  opacity: 0.7;
+}
+
+.offer {
+  margin-top: 300px;
+  position: absolute;
+}
+
+.about-wrap {
+  display: flex;
+  width: 80%;
+}
+
+.about-wrap div {
+  height: 80%;
+  width: 22%;
+  margin: 20px auto;
+  background-color: black;
+}
+
+@media (max-width: 780px) {
+  li {
+    display: none;
+  }
+  .logo {
+    opacity: 1;
+    position: fixed;
+    z-index: 777000;
+  }
+
+  .logo img {
+    height: 100px;
+    margin-top: 20px;
+    position: fixed;
+    left: calc(50% - 80px);
+  }
+
+  .words {
+    display: none;
+  }
+
+  .reverse {
+    display: none;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  button {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+
+  .section {
+    width: 80%;
+  }
 }
